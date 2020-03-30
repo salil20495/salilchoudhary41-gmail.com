@@ -1,8 +1,8 @@
-import * as mongoose from 'mongoose'
+import * as mongoose from 'mongoose';
 
-export const jobschema=new mongoose.Schema({
-    name:{Type:String,Required:true},
-    designation:{Type:String,Required:true},
-    technology:{Type:String,Required:true},
-    salary:{Type:Number,Required:true}
+export const JobSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  designation: { type: String, required: true },
+  technology: { type: String, required: true },
+  salary: { type: Number, required: true },
 });
