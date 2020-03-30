@@ -1,0 +1,13 @@
+import { Module } from '@nestjs/common';
+import { CrudController } from './crud.controller';
+import { CrudService } from './crud.service';
+import {employeeModel} from './employee.interface'
+import {jobschema} from './employee.schema'
+import {MongooseModule} from '@nestjs/mongoose'
+
+@Module({
+    imports:[CrudModule,MongooseModule.forFeature([{name:"employee",schema:"jobschema",collection:"employee"}])],
+    controllers:[CrudController],
+    providers:[CrudService]
+})
+export class CrudModule {}
