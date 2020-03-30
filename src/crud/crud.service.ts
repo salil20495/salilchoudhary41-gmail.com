@@ -5,7 +5,8 @@ import {model, Model} from 'mongoose'
 import {InjectModel} from '@nestjs/mongoose'
 @Injectable()
 export class CrudService {
-    constructor(@InjectModel('employee') private readonly jobmodel:Model<employeeModel>){}
+    //constructor(@InjectModel('employee') private readonly jobmodel:Model<employeeModel>){}
+    constructor(@InjectModel('employee') private readonly Model<employeeModel>){}
  async add(a:number,b:number,c:number):Promise<number>{
         var sum=a*b*c;
         return sum
